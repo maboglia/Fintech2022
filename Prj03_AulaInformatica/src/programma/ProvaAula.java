@@ -12,8 +12,8 @@ public class ProvaAula {
 		r.aggiungiStudente(s1, 0);
 		r.aggiungiStudente(s2, 1);
 		
-		r.stampaRegistro();
-		
+//		r.stampaRegistro();
+		r.faiAppello();
 	}
 	
 }
