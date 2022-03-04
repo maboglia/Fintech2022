@@ -3,3 +3,5 @@
 ## Programma del corso
 
 * [Argomenti del corso]('materiale/../materiale/programma.md')
+
+* variabili, tipi primitivi
