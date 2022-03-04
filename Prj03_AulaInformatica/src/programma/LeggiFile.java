@@ -6,8 +6,9 @@ import java.util.Scanner;
 
 public class LeggiFile {
 
-	public static Studente[] studenti() {
-		
+	public static Studente[] studenti() {//appartiene alla classe
+		//non ho bisogno di creare un oggetto per usare il metodo
+		//Math.sqrt()
 		Studente[] contenitore = new Studente[27];
 		File f = new File("files/studenti.txt");
 		

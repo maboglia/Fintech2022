@@ -19,7 +19,12 @@ public class Studente {
 		this.nome = nome;
 		this.cognome = cognome;
 	}
-	
+
+
+	@Override
+	public String toString() {
+		return "Studente [nMatricola=" + nMatricola + ", nome=" + nome + ", cognome=" + cognome + "]";
+	}
 	
 	
 	

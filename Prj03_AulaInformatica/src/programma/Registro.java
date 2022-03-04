@@ -6,8 +6,11 @@ import java.util.Scanner;
 public class Registro {
 
 	// proprieta, attributi, fields
-	Studente[] studenti = new Studente[27];// lunghezza nota priori
+	//Studente[] studenti = new Studente[27];// lunghezza nota priori
 
+	Studente[] studenti = LeggiFile.studenti();
+	
+	
 	// metodi
 	void aggiungiStudente(Studente s, int pos) {
 		studenti[pos] = s;
@@ -16,7 +19,7 @@ public class Registro {
 	void stampaRegistro() {
 		for (Studente s : studenti) {// foreach
 			if (s != null)
-				System.out.println(s.cognome);
+				System.out.println(s);
 		}
 	}
 
@@ -31,7 +34,7 @@ public class Registro {
 			if (studenti[i] != null) {
 
 				System.out.println("E' presente lo studente: ");
-				System.out.println(studenti[i].cognome);
+				System.out.println(studenti[i]);
 
 				if (sc.nextLine().equals("s")) {
 					presenti++;
