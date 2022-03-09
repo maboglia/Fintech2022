@@ -1,27 +1,37 @@
 package view;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
 import java.util.ArrayList;
 
+import controller.TodoCtrl;
 import model.Todo;
 
 public class Demo {
 
 	public static void main(String[] args) {
 		
-		Todo t = new Todo("studiare Java");
-		Todo t2 = new Todo("studiare C#");
+		TodoCtrl ctrl = new TodoCtrl();
 		
-		ArrayList<Todo> lista = new ArrayList<Todo>();
+		ctrl.addTodo("latte");
+		ctrl.addTodo("pane");
+		ctrl.addTodo("vino");
+		ctrl.addTodo("biscotti");
+		ctrl.addTodo(new Todo("patatine"));
 		
-		lista.add(t);
-		lista.add(t2);
+		//ctrl.stampaElenco();
+		System.out.println(  ctrl.stampaHTML() );
 		
-		for (Todo todo : lista) {//foreach
-			System.out.println(todo);
-		}
-		
-		for (int i = lista.size()-1; i >=0; i--) {
-			System.out.println(lista.get(i));
+		try {
+			PrintStream ps = new PrintStream(new File("lista.html"));
+			ps.println(ctrl.stampaHTML());
+			ps.close();
+			
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
 		
