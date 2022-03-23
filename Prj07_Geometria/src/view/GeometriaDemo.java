@@ -1,6 +1,11 @@
 package view;
 
+import java.util.ArrayList;
+
+import model.Poligono;
 import model.Punto;
+import model.Quadrato;
+import model.Rettangolo;
 import model.Segmento;
 import model.Triangolo;
 
@@ -17,12 +22,23 @@ public class GeometriaDemo {
 
 		Triangolo t = new Triangolo(a, b, c);
 		
+		Rettangolo r = new Rettangolo(ab, bc);
 		
-		System.out.println(t);
-		System.out.println(t.calcolaPerimetro());
+		Quadrato q = new Quadrato(ab);
 		
+		ArrayList<Poligono> poligoni = new ArrayList<>();
+
+		poligoni.add(t);
+		poligoni.add(r);
+		poligoni.add(q);
 		
+		double superficietot = 0;
 		
+		for (Poligono poligono : poligoni) {
+			superficietot += poligono.getSuperficie();
+		}
+		
+		System.out.println("La superficie tot dei poligoni: " + superficietot);
 		
 		
 		
