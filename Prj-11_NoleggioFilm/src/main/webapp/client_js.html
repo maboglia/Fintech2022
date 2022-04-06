@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Il nostro catalogo</title>
+</head>
+<body>
+
+    <h1>Il nostro catalogo</h1>
+
+    <ul id="lista"></ul>
+
+    <script>
+        const LISTA = document.getElementById('lista');
+        const URL = 'api/film';//endpoint
+
+        fetch(URL).then(j => j.json()).then(js => {
+            for (const film of js) {
+               const LI = document.createElement('li');
+               LI.textContent = film.titolo
+               LISTA.appendChild(LI) 
+            }
+        })
+
+
+    </script>
+
+</body>
+</html>
