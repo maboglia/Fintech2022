@@ -34,9 +34,9 @@ public class LibreriaDemo {
 //				System.out.println(libri.get(i));
 //		}
 		
-//		for (Libro libro : libri) {
-//			System.out.println(libro);
-//		}
+		for (Libro libro : libri) {
+			System.out.println(libro);
+		}
 		
 //		Comparator<Libro> mc = (o1, o2) -> o1.getPagine() - o2.getPagine();
 		
