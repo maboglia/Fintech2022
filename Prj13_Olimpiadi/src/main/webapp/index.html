@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Olimpiadi</title>
+</head>
+<body>
+
+	<h1>Discipline olimpiche</h1>
+
+
+	<table id="tabella">
+	  <tr>
+	    <th>Disciplina</th>
+	    <th>Olympic Record</th>
+	  </tr>
+	  <tr>
+	    <td>100mt men</td>
+	    <td>9.80</td>
+	  </tr>
+	</table>
+
+<script>
+	const URL = "/olimpiadi/api";
+	const TAB = document.getElementById('tabella')
+	var output = ''
+	fetch(URL).then(json => json.json()).then(js => {
+		for (const record of js) {
+			console.log(record);
+			output += '<tr><td>'+record.athlete+'</td><td>'+record.record+'</td></tr>'
+
+
+	}
+		TAB.innerHTML = output;
+	
+	})
+
+
+
+</script>
+
+
+</body>
+</html>

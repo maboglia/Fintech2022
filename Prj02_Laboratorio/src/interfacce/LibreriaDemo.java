@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 //class MioComparatorePagine implements Comparator<Libro>{
 //
@@ -49,6 +50,9 @@ public class LibreriaDemo {
 			.filter(l -> l.getPrezzo()<16 )
 //			.filter(l -> l.getPrezzo()>7 )
 			.forEach(l -> System.out.println(l));
+		
+		
+		List<String> titoli = libri.stream().map(l -> l.getTitolo()).collect(Collectors.toList());
 		
 		
 
