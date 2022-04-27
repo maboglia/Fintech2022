@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+
+    <script>
+
+        const URL = 'api/parole';
+
+        fetch(URL)//promise
+            .then(collezioneJSON => collezioneJSON.json())
+            .then(collectJS => {
+
+                const TABLE = document.createElement("table");
+
+                for (const parola of collectJS) {
+                    
+                    const TR = document.createElement('tr')
+                    const TD1 = document.createElement('td')
+                    TD1.textContent = parola.p;
+                    TR.appendChild(TD1)
+                    TABLE.appendChild(TR)
+
+                }
+
+                document.body.appendChild(TABLE)
+
+            })
+
+
+    </script>
+
+
+</body>
+</html>

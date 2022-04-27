@@ -8,5 +8,14 @@ public class Parola {
 		this.p = string;
 	}
 
+	public String getP() {
+		return p;
+	}
+
+	public void setP(String p) {
+		this.p = p;
+	}
+
+	
 	
 }
