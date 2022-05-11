@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<script>
+
+    const LISTA = document.createElement("ul")
+
+    fetch("api/prodotti").then(collezione => collezione.json()).then(prodotti => {
+        for (const prodotto of prodotti) {
+            const LI = document.createElement("li")
+            LI.textContent = prodotto.nome
+            LISTA.appendChild(LI)
+        }
+        document.body.appendChild(LISTA)
+    })
+
+
+</script>
+
+</body>
+</html>
