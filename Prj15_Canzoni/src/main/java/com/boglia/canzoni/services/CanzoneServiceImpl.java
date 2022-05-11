@@ -17,18 +17,18 @@ public class CanzoneServiceImpl implements CanzoneService {
 	@Override
 	public Canzone addCanzone(Canzone c) {
 		// TODO Auto-generated method stub
-		return null;
+		return this.repo.save(c);
 	}
 
 	@Override
 	public Canzone updateCanzone(Canzone c) {
 		// TODO Auto-generated method stub
-		return null;
+		return this.repo.save(c);
 	}
 
 	@Override
 	public void deleteCanzoneById(int id) {
-		// TODO Auto-generated method stub
+		this.repo.deleteById(id);
 
 	}
 
@@ -47,7 +47,7 @@ public class CanzoneServiceImpl implements CanzoneService {
 	@Override
 	public List<Canzone> getCanzoniByGenere(String genere) {
 		// TODO Auto-generated method stub
-		return null;
+		return this.repo.findByGenere(genere);
 	}
 
 	@Override

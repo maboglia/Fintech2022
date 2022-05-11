@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<script>
+
+    const URL = 'api/canzoni'    
+    const TAB = document.createElement('table')
+    
+
+    fetch(URL)
+        .then(canzoniJSON => canzoniJSON.json())
+        .then(canzoniJS => {
+            for (const canzone of canzoniJS) {
+                            const TR = document.createElement('tr')
+                            const TD = document.createElement('td')
+                            TD.textContent = canzone.titolo
+                            TR.appendChild(TD)
+                            //console.log(canzone.titolo);
+                            TAB.appendChild(TR)
+            }
+            document.body.appendChild(TAB)
+        }
+
+    );
+
+        
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
