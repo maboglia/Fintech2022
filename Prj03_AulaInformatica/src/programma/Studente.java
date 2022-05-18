@@ -14,7 +14,6 @@ public class Studente {
 	 * @param cognome Stringa cognome studente
 	 */
 	public Studente(int nMatricola, String nome, String cognome) {
-		super();
 		this.nMatricola = nMatricola;
 		this.nome = nome;
 		this.cognome = cognome;
