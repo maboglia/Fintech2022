@@ -4,4 +4,4 @@
 
 * [Argomenti del corso]('materiale/../materiale/programma.md')
 
-* variabili, tipi primitivi
+* [Esercizi ed esercitazioni](https://github.com/maboglia/CorsoJava/tree/master/esercitazioni) 
